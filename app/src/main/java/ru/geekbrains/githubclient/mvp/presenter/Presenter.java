@@ -13,13 +13,6 @@ public class Presenter {
     }
 
     public void counterClick(int id) {
-        switch (id) {
-            case R.id.btn_counter1:
-                view.setButtonText(0, String.valueOf(model.next(0)));
-            case R.id.btn_counter2:
-                view.setButtonText(1, String.valueOf(model.next(1)));
-            case R.id.btn_counter3:
-                view.setButtonText(2, String.valueOf(model.next(2)));
-        }
+        view.setButtonText(id,  String.valueOf(model.next(id)));
     }
 }
